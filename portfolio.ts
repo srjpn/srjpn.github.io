@@ -83,8 +83,8 @@ export const skillsSection: SkillsSectionType = {
       ],
       softwareSkills: [
         {
-          skillName: 'Dotnet core',
-          iconifyTag: 'devicon:dotnetcore',
+          skillName: 'Golang',
+          iconifyTag: 'skill-icons:golang',
         },
         {
           skillName: 'NodeJs',
@@ -93,6 +93,10 @@ export const skillsSection: SkillsSectionType = {
         {
           skillName: 'Typescript',
           iconifyTag: 'skill-icons:typescript',
+        },
+        {
+          skillName: 'Dotnet core',
+          iconifyTag: 'devicon:dotnetcore',
         },
         {
           skillName: 'Python',
@@ -264,10 +268,23 @@ export const educationInfo: EducationType[] = [
 
 export const experience: ExperienceType[] = [
   {
+    role: 'Backend Engineer',
+    company: 'Deel',
+    companyLogo: '/img/icons/common/deel-logo.png',
+    date: 'April 2025 – Present',
+    desc: 'Deel is a global workforce platform that helps companies hire and manage remote talent.',
+    descBullets: [
+      'Working on Deel-IT platform services focused on scalability, reliability, and developer productivity.',
+      'Building and improving backend APIs that support global workforce operations and compliance workflows.',
+      'Collaborating with product and engineering teams to deliver high-impact features for internal and external users.',
+      'Improving performance, observability, and maintainability across critical services.',
+    ],
+  },
+  {
     role: 'Senior Software Engineer',
     company: 'Agoda',
     companyLogo: '/img/icons/common/agoda-logo-blue.png',
-    date: 'July 2024 – Present',
+    date: 'July 2024 – January 2025',
     desc: 'Agoda.com is an online travel agency catering primarily to consumers in the Asia-Pacific region, with headquarters in Singapore and operations in Bangkok, Thailand.',
     descBullets: [
       'Worked with the Flights platform team who are responsible for all flight searches and processing flight requests. Dealing with multiple requests per minute.',
