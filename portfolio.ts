@@ -335,6 +335,11 @@ export const projects: ProjectType[] = [
     tagline: 'ESOP & Equity Management Platform',
     desc: 'VestiTrack is a comprehensive software platform for managing Employee Stock Ownership Plans (ESOPs), cap tables, funding rounds, and equity allocation. It streamlines the administration of ownership structures for HR, finance teams, and founders by centralizing equity workflows, ensuring compliance, and enhancing transparency. With an intuitive interface and powerful features, VestiTrack fosters employee engagement and trust by providing clear visibility into equity distribution and ownership changes.',
   },
+  {
+    name: 'Event Business Management Platform',
+    tagline: 'Multi-tenant SaaS for Event Businesses',
+    desc: 'A multi-tenant SaaS platform for event businesses in India, covering the full workflow from first enquiry to final payment. It combines lead and CRM management, proposals, vendor and catalog management, GST-compliant invoicing, and subscription billing in one product. Integrations with WhatsApp, Meta Lead Ads, Razorpay, and UPI fit the way Indian event teams already work. My role spanned product, engineering, and roadmap ownership, including competitive analysis and a phased plan to deepen GST support.',
+  },
   // {
   //   name: 'Picktrail',
   //   tagline: 'A Streamlined Inventory Management System',
