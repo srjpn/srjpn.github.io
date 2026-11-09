@@ -333,12 +333,18 @@ export const projects: ProjectType[] = [
   {
     name: 'VestiTrack',
     tagline: 'ESOP & Equity Management Platform',
-    desc: 'VestiTrack is a comprehensive software platform for managing Employee Stock Ownership Plans (ESOPs), cap tables, funding rounds, and equity allocation. It streamlines the administration of ownership structures for HR, finance teams, and founders by centralizing equity workflows, ensuring compliance, and enhancing transparency. With an intuitive interface and powerful features, VestiTrack fosters employee engagement and trust by providing clear visibility into equity distribution and ownership changes.',
+    desc: 'VestiTrack is a comprehensive software platform for managing Employee Stock Ownership Plans (ESOPs), cap tables, funding rounds, and equity allocation. It streamlines the administration of ownership structures for HR, finance teams, and founders by centralizing equity workflows, ensuring compliance, and enhancing transparency. With an intuitive interface and powerful features, VestiTrack fosters employee engagement and trust by providing clear visibility into equity distribution and ownership changes. Under the hood it is a Vue 3 front end with a TypeScript and Express API on PostgreSQL, AWS Cognito authentication, Chargebee subscription billing, and PDF document generation, deployed on AWS with infrastructure managed as code using CDK.',
   },
   {
     name: 'Event Business Management Platform',
     tagline: 'Multi-tenant SaaS for Event Businesses',
-    desc: 'A multi-tenant SaaS platform for event businesses in India, covering the full workflow from first enquiry to final payment. It combines lead and CRM management, proposals, vendor and catalog management, GST-compliant invoicing, and subscription billing in one product. Integrations with WhatsApp, Meta Lead Ads, Razorpay, and UPI fit the way Indian event teams already work. My role spanned product, engineering, and roadmap ownership, including competitive analysis and a phased plan to deepen GST support.',
+    desc: 'A multi-tenant SaaS platform for event businesses in India, covering the full workflow from first enquiry to final payment. It combines lead and CRM management, proposals, vendor and catalog management, GST-compliant invoicing, and subscription billing in one product. Integrations with WhatsApp, Meta Lead Ads, Razorpay, and UPI fit the way Indian event teams already work. I head technology for the product, with ownership across product, engineering, and roadmap, including competitive analysis and a phased plan to deepen GST support. The stack is Next.js and TypeScript on the front end and a NestJS backend with PostgreSQL, role-based access control, and AWS Cognito authentication, deployed on AWS with infrastructure managed as code.',
+  },
+  {
+    name: 'Tumbler',
+    tagline: 'Android PIN Lock with a Shuffling Keypad',
+    desc: 'Tumbler is an Android lock screen app built with Kotlin, Jetpack Compose and Material 3. Its 3x3 keypad groups digits into buttons and reshuffles after every wrong tap, so smudges and shoulder-surfing reveal nothing. PINs are stored with EncryptedSharedPreferences, with optional fingerprint unlock. A foreground service and an accessibility-based guard keep the lock in place after Home, Recents or a reboot. Every push to main is tested, versioned and published as a GitHub Release with the APK attached.',
+    github: 'https://github.com/cocoexperiments/tumbler',
   },
   // {
   //   name: 'Picktrail',
