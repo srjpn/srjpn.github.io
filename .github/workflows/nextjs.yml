@@ -9,6 +9,10 @@ on:
   push:
     branches: ['master']
 
+  # Yearly rebuild (1 Aug) so the computed years of experience stays current
+  schedule:
+    - cron: '0 0 1 8 *'
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

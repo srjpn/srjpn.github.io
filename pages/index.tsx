@@ -4,6 +4,7 @@ import Reveal from '../components/Reveal';
 import ResumeButton from '../components/ResumeButton';
 import {
   greetings,
+  calculateExperienceYears,
   openSource,
   socialLinks,
   skillsSection,
@@ -35,7 +36,7 @@ export default function Home({
   githubProfileData: Partial<GithubUserType> | null;
 }) {
   const [first, ...rest] = greetings.name.split(' ');
-  const years = new Date().getFullYear() - 2017;
+  const years = calculateExperienceYears();
   const companies = new Set(experience.map((e) => e.company)).size;
   const gh = githubProfileData || {};
 

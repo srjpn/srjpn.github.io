@@ -39,7 +39,7 @@ const numberToText = (number: number): string => {
   return textNumbers[number] || number.toString();
 };
 
-const calculateExperienceYears = () => {
+export const calculateExperienceYears = () => {
   const startDate = moment('2017-07-01');
   const currentDate = moment();
   return currentDate.diff(startDate, 'years');
