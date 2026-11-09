@@ -1,48 +1,58 @@
 import React from 'react';
-import { greetings, educationInfo, experience, projects, socialLinks } from '../portfolio';
-import { Button } from 'reactstrap';
+import {
+  greetings,
+  educationInfo,
+  experience,
+  projects,
+  socialLinks,
+} from '../portfolio';
 
 const ResumeButton: React.FC = () => {
-    const generateMarkdown = () => {
-        const markdownContent = `
-# ${greetings.name}
+  const download = () => {
+    const md = `# ${greetings.name}
 
 ${greetings.description}
 
-${Object.keys(socialLinks).map(link => `- [${link}](${socialLinks[link]})`).join('\n')}
+${Object.keys(socialLinks)
+  .map((l) => `- [${l}](${socialLinks[l]})`)
+  .join('\n')}
 
 ## Experience
-${experience.map(exp => `### ${exp.role} at ${exp.company}\n- **Duration:** ${exp.date}\n- **Description:** ${exp.desc}\n${exp.descBullets ? exp.descBullets.map(bullet => `  - ${bullet}`).join('\n') : ''}`).join('\n\n')}
-
+${experience
+  .map(
+    (e) =>
+      `### ${e.role} at ${e.company}\n- **Duration:** ${
+        e.date
+      }\n- **Description:** ${e.desc}\n${(e.descBullets || [])
+        .map((b) => `  - ${b}`)
+        .join('\n')}`
+  )
+  .join('\n\n')}
 
 ## Education
-${educationInfo.map(edu => `### ${edu.course}\n- **School:** ${edu.schoolName}\n- **Duration:** ${edu.duration}\n- **Description:** ${edu.desc}`).join('\n\n')}
-
+${educationInfo
+  .map(
+    (e) =>
+      `### ${e.course}\n- **School:** ${e.schoolName}\n- **Duration:** ${e.duration}\n- **Description:** ${e.desc}`
+  )
+  .join('\n\n')}
 
 ## Projects
-${projects.map(proj => `### ${proj.name}\n${proj.tagline}\n\n${proj.desc}`).join('\n\n')}
-    `;
-        const blob = new Blob([markdownContent], { type: 'text/markdown' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'resume.md';
-        a.click();
-        URL.revokeObjectURL(url);
-    };
+${projects.map((p) => `### ${p.name}\n${p.tagline}\n\n${p.desc}`).join('\n\n')}
+`;
+    const url = URL.createObjectURL(new Blob([md], { type: 'text/markdown' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'resume.md';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
-    return (
-        <Button
-            className="btn-icon-only rounded-circle ml-1"
-            color="default"
-            onClick={generateMarkdown}
-            aria-label="Generate Resume"
-        >
-            <span className="btn-inner--icon">
-                <i className="fa fa-file" />
-            </span>
-        </Button>
-    );
+  return (
+    <button className="btn" onClick={download}>
+      Download resume ↓
+    </button>
+  );
 };
 
 export default ResumeButton;
